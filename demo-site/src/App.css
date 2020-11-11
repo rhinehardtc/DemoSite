@@ -23,7 +23,6 @@
   justify-content: center;
 
   height: 100vh;
-  border: 1px dotted red;
 }
 
 .scroll_down {
@@ -31,7 +30,7 @@
   font-weight: 400;
 }
 
-.p5_div {
+.p5_shapes_div {
   display: flex;
   position: absolute;
   top: 0;

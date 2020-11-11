@@ -8,8 +8,7 @@ function App() {
   let easing = 0.05;
  
   const shapesSetup = (p5, canvasParentRef) => {
-    p5.createCanvas(1440, 400).parent(canvasParentRef);
-    p5.noStroke();
+    p5.createCanvas(p5.windowWidth, p5.windowHeight / 2).parent(canvasParentRef);
   };
  
   const shapesDraw = (p5) => {
@@ -25,25 +24,43 @@ function App() {
     let c = p5.color(255, 0, 0);
     p5.fill(c);
     p5.noStroke();
-    p5.ellipse(x, 250, 150, 150);
-    c = p5.color(255, 253, 122);
+    p5.ellipse(x, 250, p5.windowWidth / 7, p5.windowWidth / 7);
+
+    c = p5.color('#fffd7ad1');
     p5.fill(c);
-    p5.noStroke();
-    p5.square(200, y + 300, 88);
+    p5.stroke(255, 253, 122);
+    p5.strokeWeight(4);
+    
+    p5.square(p5.windowWidth / 7, y - 450, p5.windowWidth / 15);
+    p5.square(p5.windowWidth / 7, y - 300, p5.windowWidth / 15);
+    p5.square(p5.windowWidth / 7, y - 150, p5.windowWidth / 15);
+    p5.square(p5.windowWidth / 7, y , p5.windowWidth / 15);
+    p5.square(p5.windowWidth / 7, y + 150, p5.windowWidth / 15);
+    p5.square(p5.windowWidth / 7, y + 300, p5.windowWidth / 15);
+    p5.square(p5.windowWidth / 7, y + 450, p5.windowWidth / 15);
+    p5.square(p5.windowWidth / 7, y + 600, p5.windowWidth / 15);
+    p5.square(p5.windowWidth / 7, y + 750, p5.windowWidth / 15);
+
+    p5.square((p5.windowWidth / 7) * 5.57, y - 450, p5.windowWidth / 15);
+    p5.square((p5.windowWidth / 7) * 5.57, y - 300, p5.windowWidth / 15);
+    p5.square((p5.windowWidth / 7) * 5.57, y - 150, p5.windowWidth / 15);
+    p5.square((p5.windowWidth / 7) * 5.57, y , p5.windowWidth / 15);
+    p5.square((p5.windowWidth / 7) * 5.57, y + 150, p5.windowWidth / 15);
+    p5.square((p5.windowWidth / 7) * 5.57, y + 300, p5.windowWidth / 15);
+    p5.square((p5.windowWidth / 7) * 5.57, y + 450, p5.windowWidth / 15);
+    p5.square((p5.windowWidth / 7) * 5.57, y + 600, p5.windowWidth / 15);
+    p5.square((p5.windowWidth / 7) * 5.57, y + 750, p5.windowWidth / 15);
   };
  
   return (
     <div className="main_div">
-      <div className="p5_div">
+      <div className="p5_shapes_div">
         <Sketch setup={shapesSetup} draw={shapesDraw} />
       </div>
       <header className="welcome_header">
           Welcome!
           <h6 className="scroll_down">▼ Scroll Down to Learn About Me ▼</h6>
       </header>
-      <div>
-        <Sketch setup={shapesSetup} draw={shapesDraw} />
-      </div>
     </div>
   );
 }
