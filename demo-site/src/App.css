@@ -1,11 +1,41 @@
+.main_div {
+  display: flex;
+  flex-flow: column;
+  position: sticky;
+
+  width: 100%;
+  
+  overflow-x: hidden;
+  background-color: rgba(255, 253, 122);
+}
+
 .welcome_header {
   display: flex;
   flex-flow: column;
-  font-size: 50px;
-  font-size: 8vmin;
-  font-weight: bold;
+  position: sticky;
+
+  font-size: 30px;
+  font-size: 10vmin;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+
   text-align: center;
   justify-content: center;
+
   height: 100vh;
   border: 1px dotted red;
+}
+
+.scroll_down {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+.p5_div {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50vh;
+  overflow-y: hidden;
 }
