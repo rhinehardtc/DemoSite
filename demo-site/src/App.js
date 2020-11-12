@@ -1,4 +1,5 @@
 import Sketch from "react-p5";
+import AboutMe from "./AboutMe";
 import './App.css';
 
 function App() {
@@ -24,13 +25,15 @@ function App() {
     let c = p5.color(255, 0, 0);
     p5.fill(c);
     p5.noStroke();
-    p5.ellipse(x, 250, p5.windowWidth / 7, p5.windowWidth / 7);
+    p5.ellipse(x, p5.windowHeight / 3.3, p5.windowWidth / 7, p5.windowWidth / 7);
 
     c = p5.color('#fffd7ad1');
     p5.fill(c);
-    p5.stroke(255, 253, 122);
-    p5.strokeWeight(4);
+    p5.stroke(255, 0, 0);
+    p5.strokeWeight(p5.windowWidth / 150);
     
+    p5.square(p5.windowWidth / 7, y - 750, p5.windowWidth / 15);
+    p5.square(p5.windowWidth / 7, y - 600, p5.windowWidth / 15);
     p5.square(p5.windowWidth / 7, y - 450, p5.windowWidth / 15);
     p5.square(p5.windowWidth / 7, y - 300, p5.windowWidth / 15);
     p5.square(p5.windowWidth / 7, y - 150, p5.windowWidth / 15);
@@ -41,6 +44,8 @@ function App() {
     p5.square(p5.windowWidth / 7, y + 600, p5.windowWidth / 15);
     p5.square(p5.windowWidth / 7, y + 750, p5.windowWidth / 15);
 
+    p5.square((p5.windowWidth / 7) * 5.57, y - 750, p5.windowWidth / 15);
+    p5.square((p5.windowWidth / 7) * 5.57, y - 600, p5.windowWidth / 15);
     p5.square((p5.windowWidth / 7) * 5.57, y - 450, p5.windowWidth / 15);
     p5.square((p5.windowWidth / 7) * 5.57, y - 300, p5.windowWidth / 15);
     p5.square((p5.windowWidth / 7) * 5.57, y - 150, p5.windowWidth / 15);
@@ -58,9 +63,10 @@ function App() {
         <Sketch setup={shapesSetup} draw={shapesDraw} />
       </div>
       <header className="welcome_header">
-          Welcome!
+          <p>Welcome!</p>
           <h6 className="scroll_down">▼ Scroll Down to Learn About Me ▼</h6>
       </header>
+      <AboutMe />
     </div>
   );
 }
