@@ -1,20 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sketch from "react-p5";
 
 const AboutMe = () => {
     const leftList = ["Ruby on Rails", "JavaScript", "React", "HTML5", "CSS3", "JSON", "And More!"];
 
     const scrollVal = window.innerHeight;
+
+    useEffect(() => {
+        console.log("in useEffect")
+    })
  
+    let changable = false;
+
     window.addEventListener("scroll", () => {
         const currentScroll = window.pageYOffset;
         let opacity;
 
         if (currentScroll < scrollVal) {
-            document.querySelector(".img_of_me").style.display = "none";
+            changable = false;
             opacity = 0 + currentScroll / scrollVal;
         } else {
-            document.querySelector(".img_of_me").style.display = "block";
+            changable = true;
             opacity = 1;
         }
         document.querySelector(".about_me_div").style.opacity = opacity;
@@ -42,17 +48,23 @@ const AboutMe = () => {
 
         img.loadPixels();
 
-        const stepSize = Math.floor(p5.constrain(p5.mouseX / 10, 4, 12));
-
-        if(document.querySelector(".img_of_me").style.display !== "none") {
-            for (let y = 0; y < img.height; y += stepSize) {
-                for (let x = 0; x < img.width; x += stepSize) {
-                    const i = y * img.width + x;
-                    const darkness = (255 - img.pixels[i * 4]) / 255;
-                    const radius = stepSize * darkness;
-                    p5.ellipse(x, y, radius, radius);
-                }
+        const stepSize = Math.floor(p5.constrain(p5.mouseX / 6, 2, 40));
+        
+        for (let y = 0; y < img.height; y += stepSize) {
+            for (let x = 0; x < img.width; x += stepSize) {
+                const i = y * img.width + x;
+                const darkness = (255 - img.pixels[i * 4]) / 255;
+                const radius = stepSize * darkness;
+                p5.ellipse(x, y, radius, radius);
             }
+        }
+        
+        p5.noLoop();
+    }
+
+    const mouseMoved = (p5) => {
+        if(changable === true) {
+            if((p5.mouseX > p5.windowWidth / 200) && (p5.mouseY < (img.height / 8) * 7)) p5.loop()
         }
     }
 
@@ -64,7 +76,7 @@ const AboutMe = () => {
             <div className="intro_div">
                 <h1>Hello</h1>
                 <div className="img_of_me">
-                    <Sketch preload={preload} setup={imgSetup} draw={imgDraw} />
+                    <Sketch preload={preload} setup={imgSetup} draw={imgDraw} mouseMoved={mouseMoved} />
                 </div>
             </div>
         </div>
