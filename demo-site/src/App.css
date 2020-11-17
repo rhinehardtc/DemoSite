@@ -44,8 +44,8 @@
   display: flex;
   flex-flow: row;
 
-  font-size: 30px;
-  font-size: 10vmin;
+  font-size: 20px;
+  font-size: 6vw;
   font-family: 'Rubik', sans-serif;
   font-weight: 700;
 
@@ -55,11 +55,29 @@
 .about_left_div {
   display: flex;
   flex-flow: column nowrap;
+  position: sticky;
   float: left;
-  padding: 2%;
+
+  padding: 2% 0 2% 0;
   max-width: 45%;
-  width: fit-content;
+  width: 40%;
+
   justify-content: center;
+  overflow-x: hidden;
+
+  font-size: 20px;
+  font-size: 5vw;
 
   background-color: rgb(137, 134, 193);
+}
+
+.skill {
+  padding-left: 2%;
+}
+
+.skill:hover{
+  border-left: 1vw solid red;
+  background-color: rgb(255, 253, 147);
+  padding-left: 4%;
+  cursor: pointer;
 }
