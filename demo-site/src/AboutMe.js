@@ -50,12 +50,14 @@ const AboutMe = () => {
 
         const stepSize = Math.floor(p5.constrain(p5.mouseX / 4, 2, 40));
         
-        for (let y = 0; y < img.height; y += stepSize) {
-            for (let x = 0; x < img.width; x += stepSize) {
-                const i = y * img.width + x;
-                const darkness = (255 - img.pixels[i * 4]) / 255;
-                const radius = stepSize * darkness;
-                p5.ellipse(x, y, radius, radius);
+        if(img){
+            for (let y = 0; y < img.height; y += stepSize) {
+                for (let x = 0; x < img.width; x += stepSize) {
+                    const i = y * img.width + x;
+                    const darkness = (255 - img.pixels[i * 4]) / 255;
+                    const radius = stepSize * darkness;
+                    p5.ellipse(x, y, radius, radius);
+                }
             }
         }
         
@@ -63,7 +65,7 @@ const AboutMe = () => {
     };
 
     const mouseMoved = (p5) => {
-        if(changable === true) {
+        if(changable === true && img) {
             if((p5.mouseX > p5.windowWidth / 200) && (p5.mouseY < (img.height / 8) * 7)) p5.loop()
         }
     };
@@ -96,11 +98,14 @@ const AboutMe = () => {
                     <p>
                         I graduated from Florida Atlantic University with a degree in Fine Arts in 2016. I had done 
                         a few gallery showings of my work while working at Microsoft from about 2015 to 2020 and 
-                        decided that I would like to join the worlds of art and tech, so now I find myself quickly 
-                        falling in love with the world of programming! I also studied Japanese in highschool and 
-                        college for six years and continue to enjoy practicing on my own. Hopefully you can see some 
-                        of my creativity shine in this, my personal site. For further details on some of my skills, 
-                        click on the items in the list to the left.
+                        decided that I would like to join the worlds of art and tech, so I enrolled in and graduated
+                        from FlatIron bootcamp with a certification in software engineering. Now I find myself quickly 
+                        falling in love with the world of programming!
+                    </p>
+                    <p>
+                        I also studied Japanese in highschool and college for six years and continue to enjoy practicing 
+                        on my own. Hopefully you can see some of my creativity shine in this, my personal site. For 
+                        further details on some of my skills, click on the items in the list to the left.
                     </p>
                 </div>
             </div>
