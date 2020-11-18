@@ -123,4 +123,5 @@
   overflow-y: scroll;
   border-top: 0.5em solid red;
   border-bottom: 0.5em solid red;
+  border-radius: 3%;
 }
