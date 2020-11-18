@@ -83,18 +83,44 @@
   cursor: pointer;
 }
 
+.about_right_div {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 60%
+}
+
 .intro_div {
   display: flex;
   flex-flow: row nowrap;
-  width: 60%;
+  width: 100%;
   height: fit-content;
 
   text-align: center;
   justify-content: space-between;
-
 }
 
 .img_of_me {
   height: fit-content;
+}
 
+.intro_text {
+  display: flex;
+  flex-flow: column nowrap;
+
+  font-size: 10px;
+  font-size: 3vmin;
+  font-weight: 400;
+  text-align: justify;
+  text-indent: 2em;
+
+  padding-left: 5%;
+  padding-right: 5%;
+  align-self: center;
+
+  width: 90%;
+  height: 35vh;
+
+  overflow-y: scroll;
+  border-top: 0.5em solid red;
+  border-bottom: 0.5em solid red;
 }
