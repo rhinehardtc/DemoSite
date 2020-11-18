@@ -8,7 +8,7 @@ const AboutMe = () => {
 
     useEffect(() => {
         console.log("in useEffect")
-    })
+    });
  
     let changable = false;
 
@@ -30,7 +30,7 @@ const AboutMe = () => {
 
     const preload = (p5) => {
         img = p5.loadImage('/me.jpg'); // Load the image
-    }
+    };
 
     const imgSetup = (p5, canvasParentRef) => {
         p5.createCanvas(p5.windowWidth / 5, p5.windowHeight / 2.5).parent(canvasParentRef);
@@ -48,7 +48,7 @@ const AboutMe = () => {
 
         img.loadPixels();
 
-        const stepSize = Math.floor(p5.constrain(p5.mouseX / 6, 2, 40));
+        const stepSize = Math.floor(p5.constrain(p5.mouseX / 4, 2, 40));
         
         for (let y = 0; y < img.height; y += stepSize) {
             for (let x = 0; x < img.width; x += stepSize) {
@@ -60,23 +60,48 @@ const AboutMe = () => {
         }
         
         p5.noLoop();
-    }
+    };
 
     const mouseMoved = (p5) => {
         if(changable === true) {
             if((p5.mouseX > p5.windowWidth / 200) && (p5.mouseY < (img.height / 8) * 7)) p5.loop()
         }
-    }
+    };
+
+    const linkStyle = {color: 'red', marginLeft: '1%', textDecoration: 'none'};
+
 
     return (
         <div className="about_me_div">
             <div className="about_left_div">
                 {leftList.map(skill => <div key={skill} className="skill">{skill}</div>)}
             </div>
-            <div className="intro_div">
-                <h1>Hello</h1>
-                <div className="img_of_me">
-                    <Sketch preload={preload} setup={imgSetup} draw={imgDraw} mouseMoved={mouseMoved} />
+            <div className="about_right_div">
+                <div className="intro_div">
+                    <h1>Hello!</h1>
+                    <div className="img_of_me">
+                        <Sketch preload={preload} setup={imgSetup} draw={imgDraw} mouseMoved={mouseMoved} />
+                    </div>
+                </div>
+                <div className="intro_text">
+                    <p>
+                        My name is Cameron Rhinehardt. I'm a creative and passionate person who loves to take on new
+                        challenges and opportunities to learn. My hobbies include playing guitar, creating 
+                        <a href="https://youtu.be/JnKXg-ciL78" title="Vapor93 on YouTube" target="_blank" style={linkStyle} >synthwave music</a>,
+                        animation, painting,
+                        <a href="https://photos.app.goo.gl/THZHY2451R8AL8148" title="Photos I Have Taken" target="_blank" style={linkStyle}>photography</a>,
+                        <a href="https://photos.app.goo.gl/YUG2TTpmW5SqcnUa6" title="R E T R O  A E S T H E T I C  P H O T O S" target="_blank" style={linkStyle} >digital photo editing</a>,
+                        cooking, and the emerging world of VR! 
+                    </p>
+                    <p>
+                        I graduated from Florida Atlantic University with a degree in Fine Arts in 2016. I had done 
+                        a few gallery showings of my work while working at Microsoft from about 2015 to 2020 and 
+                        decided that I would like to join the worlds of art and tech, so now I find myself quickly 
+                        falling in love with the world of programming! I also studied Japanese in highschool and 
+                        college for six years and continue to enjoy practicing on my own. Hopefully you can see some 
+                        of my creativity shine in this, my personal site. For further details on some of my skills, 
+                        click on the items in the list to the left.
+                    </p>
                 </div>
             </div>
         </div>
