@@ -1,5 +1,5 @@
 import Sketch from "react-p5";
-import AboutMe from "./AboutMe";
+import SectionDisplay from "./SectionDisplay";
 import './App.css';
 
 function App() {
@@ -66,7 +66,7 @@ function App() {
           <p>Welcome!</p>
           <h6 className="scroll_down">▼ Scroll Down to Learn About Me ▼</h6>
       </header>
-      <AboutMe />
+      <SectionDisplay />
     </div>
   );
 }
