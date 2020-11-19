@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Sketch from "react-p5";
 
-const AboutMe = () => {
+const SectionDisplay = () => {
+
+    const [section, setSection] = useState('about');
+
+    useEffect(() => {
+        console.log(section)
+    });
+
     const leftList = ["Ruby on Rails", "JavaScript", "React", "HTML5", "CSS3", "JSON", "And More!"];
 
     const scrollVal = window.innerHeight;
-
-    useEffect(() => {
-        console.log("in useEffect")
-    });
  
     let changable = false;
 
@@ -71,13 +74,11 @@ const AboutMe = () => {
     };
 
     const linkStyle = {color: 'red', marginLeft: '1%', textDecoration: 'none'};
+    const sectionStyle = {color: 'black'};
+    const aboutMeStyle = {color: 'red'};
 
-
-    return (
-        <div className="about_me_div">
-            <div className="about_left_div">
-                {leftList.map(skill => <div key={skill} className="skill">{skill}</div>)}
-            </div>
+    const sectionTable = {
+        'about': 
             <div className="about_right_div">
                 <div className="intro_div">
                     <h1>Hello!</h1>
@@ -108,9 +109,40 @@ const AboutMe = () => {
                         further details on some of my skills, click on the items in the list to the left.
                     </p>
                 </div>
+            </div>,
+        'Ruby on Rails':
+            <h2>Ruby on Rails</h2>,
+        'JavaScript':
+            <h2>JavaScrump</h2>,
+        'React':
+            <h1>React</h1>,
+        'HTML5':
+            <h1>HTML5</h1>,
+        'CSS3':
+            <h1>CSS3</h1>,
+        'JSON':
+            <h1>JSON</h1>,
+        'And More!':
+            <h3>Wait, there's more?</h3>
+    }
+
+
+    return (
+        <div className="about_me_div">
+            <div className="about_left_div">
+                {leftList.map(skill => 
+                        <div 
+                            key={skill} 
+                            className="skill" 
+                            onClick={() => section === skill ? setSection('about') : setSection(skill)} 
+                            style={section === skill ? aboutMeStyle : sectionStyle}
+                        >{section === skill ? 'About Me' : skill}</div>
+                    )
+                }
             </div>
+            {sectionTable[section]}
         </div>
     );
 }
 
-export default AboutMe;
+export default SectionDisplay;
