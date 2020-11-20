@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Sketch from "react-p5";
+import SocialLinks from './SocialLinks';
 
 const SectionDisplay = () => {
 
@@ -9,7 +10,7 @@ const SectionDisplay = () => {
         console.log(section)
     });
 
-    const leftList = ["Ruby on Rails", "JavaScript", "React", "HTML5", "CSS3", "JSON", "And More!"];
+    const leftList = ["Ruby on Rails", "JavaScript", "React", "HTML5", "CSS3", "And More!", "Social Links"];
 
     const scrollVal = window.innerHeight;
  
@@ -26,7 +27,7 @@ const SectionDisplay = () => {
             changable = true;
             opacity = 1;
         }
-        document.querySelector(".about_me_div").style.opacity = opacity;
+        document.querySelector(".section_div").style.opacity = opacity;
     });
 
     let img; // Declare variable 'img'.
@@ -79,7 +80,7 @@ const SectionDisplay = () => {
 
     const sectionTable = {
         'about': 
-            <div className="about_right_div">
+            <>
                 <div className="intro_div">
                     <h1>Hello!</h1>
                     <div className="img_of_me">
@@ -109,9 +110,11 @@ const SectionDisplay = () => {
                         further details on some of my skills, click on the items in the list to the left.
                     </p>
                 </div>
-            </div>,
+            </>,
         'Ruby on Rails':
-            <h2>Ruby on Rails</h2>,
+            <>
+                <h2>Ruby on Rails</h2>
+            </>,
         'JavaScript':
             <h2>JavaScrump</h2>,
         'React':
@@ -120,16 +123,16 @@ const SectionDisplay = () => {
             <h1>HTML5</h1>,
         'CSS3':
             <h1>CSS3</h1>,
-        'JSON':
-            <h1>JSON</h1>,
         'And More!':
-            <h3>Wait, there's more?</h3>
+            <h3>Wait, there's more?</h3>,
+        'Social Links':
+            <SocialLinks />
     }
 
 
     return (
-        <div className="about_me_div">
-            <div className="about_left_div">
+        <div className="section_div">
+            <div className="section_left_div">
                 {leftList.map(skill => 
                         <div 
                             key={skill} 
@@ -140,7 +143,7 @@ const SectionDisplay = () => {
                     )
                 }
             </div>
-            {sectionTable[section]}
+            <div className="section_right_div">{sectionTable[section]}</div>
         </div>
     );
 }

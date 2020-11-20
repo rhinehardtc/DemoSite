@@ -40,7 +40,7 @@
   border-bottom: 8px solid red;
 }
 
-.about_me_div {
+.section_div {
   display: flex;
   flex-flow: row;
 
@@ -52,7 +52,7 @@
   height: 100vh;
 }
 
-.about_left_div {
+.section_left_div {
   display: flex;
   flex-flow: column nowrap;
   position: sticky;
@@ -83,7 +83,7 @@
   cursor: pointer;
 }
 
-.about_right_div {
+.section_right_div {
   display: flex;
   flex-flow: column nowrap;
   width: 60%
@@ -124,4 +124,14 @@
   border-top: 0.5em solid red;
   border-bottom: 0.5em solid red;
   border-radius: 3%;
+}
+
+.link_logos {
+  display: flex;
+  flex-flow: row nowrap;
+  align-self: center;
+}
+
+.link_icon {
+  width: 10vmin;
 }
