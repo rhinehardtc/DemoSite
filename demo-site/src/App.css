@@ -37,7 +37,7 @@
   left: 0;
   height: 50vh;
   overflow-y: hidden;
-  border-bottom: 8px solid red;
+  border-bottom: 1vh solid red;
 }
 
 .section_div {

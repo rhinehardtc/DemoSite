@@ -33,7 +33,7 @@ const SectionDisplay = () => {
     let img; // Declare variable 'img'.
 
     const preload = (p5) => {
-        img = p5.loadImage('/me.jpg'); // Load the image
+        img = p5.loadImage('./me.jpg'); // Load the image
     };
 
     const imgSetup = (p5, canvasParentRef) => {
