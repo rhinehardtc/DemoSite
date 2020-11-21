@@ -6,6 +6,7 @@ import SocialLinks from './SocialLinks';
 const SectionDisplay = () => {
 
     const [section, setSection] = useState('about');
+    const [img, setImg] = useState();
 
     useEffect(() => {
         console.log(section)
@@ -31,10 +32,10 @@ const SectionDisplay = () => {
         document.querySelector(".section_div").style.opacity = opacity;
     });
 
-    let img; // Declare variable 'img'.
+    // let img; // Declare variable 'img'.
 
     const preload = (p5) => {
-        img = p5.loadImage('./me.jpg'); // Load the image
+        setImg(p5.loadImage('./me.jpg')); // Load the image
     };
 
     const imgSetup = (p5, canvasParentRef) => {
@@ -75,6 +76,15 @@ const SectionDisplay = () => {
         }
     };
 
+    const windowResized = (p5) => {
+        p5.resizeCanvas(p5.windowWidth / 5, p5.windowHeight / 2.5);
+
+        if(img){
+            img.resize(p5.windowWidth / 5, 0);
+            p5.redraw();
+        };
+    }
+
     const linkStyle = {color: 'red', marginLeft: '1%', textDecoration: 'none'};
     const sectionStyle = {color: 'black'};
     const aboutMeStyle = {color: 'red'};
@@ -85,7 +95,7 @@ const SectionDisplay = () => {
                 <div className="intro_div">
                     <h1>Hello!</h1>
                     <div className="img_of_me">
-                        <Sketch preload={preload} setup={imgSetup} draw={imgDraw} mouseMoved={mouseMoved} />
+                        <Sketch preload={preload} setup={imgSetup} draw={imgDraw} mouseMoved={mouseMoved} windowResized={windowResized} />
                     </div>
                 </div>
                 <div className="intro_text">
