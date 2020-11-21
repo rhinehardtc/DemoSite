@@ -146,6 +146,9 @@
   border-right: 0.3em solid red;
   border-top-right-radius: 1vh;
   border-bottom-right-radius: 1vh;
+
+  transition: 0.5s;
+  overflow: hidden;
 }
 
 .closed_react_vids_div * {
@@ -164,6 +167,8 @@
   border-right: 0.3em solid red;
   border-top-right-radius: 1vh;
   border-bottom-right-radius: 1vh;
+
+  transition: 0.5s;
 }
 
 .video_viewport {
