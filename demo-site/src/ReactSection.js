@@ -14,6 +14,8 @@ const ReactSection = () => {
         }
     }
 
+    const linkStyle = {color: 'red', marginLeft: '1%', textDecoration: 'none'};
+
     return (
         <>
             <div className="intro_div">
@@ -43,6 +45,19 @@ const ReactSection = () => {
                 <div className="scroll_indicator" onClick={() => toggle()}>
                     <p>▷</p>
                     <p>▷</p>
+                </div>
+                <div className="react_text">
+                    <p>
+                        I'm doing a lot lately with React! Out of all the programming languages, libraries, and tools that I've tried,
+                        I think React might just be my favorite so far. I LOVE how easy it makes it to design websites and web-apps and
+                        now that I'm getting the hang of hooks, I like it even more because state management has become a breeze! 
+                    </p> 
+                    <p>
+                        This site was also made with React, and if you click the drawer to the left of this text you can watch some demo
+                        videos of my most recent React projects. Horrizontally scroll through them with your laptop touch pad, or shift +
+                        scroll with your mouse. You can also click here to check out my  
+                        <a href="https://rhinehardtc.github.io/Tell-A-Punch3020/" rel="noreferrer" title="Tell-A-Punch3020" target="_blank" style={linkStyle}> React fighting game</a>.
+                    </p>
                 </div>
             </div>
         </>

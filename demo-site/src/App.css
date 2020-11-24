@@ -129,6 +129,33 @@
   border-radius: 3%;
 }
 
+.react_text {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  float: right;
+
+  font-size: 10px;
+  font-size: 3vmin;
+  font-weight: 400;
+  text-align: justify;
+  text-indent: 2em;
+
+  padding-left: 5%;
+  padding-right: 5%;
+  align-self: center;
+
+  width: 50%;
+  height: 30vmin;
+
+  overflow-y: scroll;
+  border-top: 0.5em solid red;
+  border-bottom: 0.5em solid red;
+  border-radius: 3%;
+  
+  z-index: 0;
+}
+
 .outer_vid_div {
   display: flex;
   flex-flow: row nowrap;
@@ -149,6 +176,7 @@
 
   transition: 0.5s;
   overflow: hidden;
+  z-index: 3;
 }
 
 .closed_react_vids_div * {
@@ -169,6 +197,7 @@
   border-bottom-right-radius: 1vh;
 
   transition: 0.5s;
+  z-index: 3;
 }
 
 .video_viewport {
@@ -205,6 +234,7 @@
   color: red;
 
   cursor: pointer;
+  z-index: 3;
 }
 
 .link_logos {
