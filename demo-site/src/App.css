@@ -76,8 +76,12 @@
 
 .skill:hover{
   border-left: 1vw solid red;
-  background-color: rgb(255, 253, 147);
+  background-color: black;
   padding-left: 4%;
+
+  color: rgb(255, 253, 147);
+
+  transition: 0.5s;
 
   cursor: pointer;
 }
@@ -122,6 +126,56 @@
 
   width: 90%;
   height: 35vh;
+
+  overflow-y: scroll;
+  border-top: 0.5em solid red;
+  border-bottom: 0.5em solid red;
+  border-radius: 3%;
+}
+
+.html5_header_div {
+  justify-content: center;
+
+  margin-top: 0.85em;
+  margin-bottom: 1em;
+
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.unslide_letters {
+  margin-left: 0;
+  margin-right: 0;
+
+  transition: 0.2s;
+}
+
+.slide_letters {
+  margin-left: 5%;
+  margin-right: 5%;
+
+  color: red;
+
+  transition: 0.5s;
+}
+
+.html5_text {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+
+  font-size: 10px;
+  font-size: 3vmin;
+  font-weight: 400;
+  text-align: justify;
+  text-indent: 2em;
+
+  padding-left: 5%;
+  padding-right: 5%;
+  align-self: center;
+
+  width: 90%;
+  height: 30vmin;
 
   overflow-y: scroll;
   border-top: 0.5em solid red;
@@ -311,5 +365,5 @@
   max-width: 120px;
   min-width: 29px;
 
-  font-size: 18px;
+  font-size: 2vmin;
 }

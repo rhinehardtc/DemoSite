@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Sketch from "react-p5";
+import HTML5Section from './HTML5Section';
 import ReactSection from './ReactSection';
 import SocialLinks from './SocialLinks';
 
@@ -86,8 +87,8 @@ const SectionDisplay = () => {
     }
 
     const linkStyle = {color: 'red', marginLeft: '1%', textDecoration: 'none'};
-    const sectionStyle = {color: 'black'};
-    const aboutMeStyle = {color: 'red'};
+    const sectionStyle = {color: ''};
+    const aboutMeStyle = {color: 'rgb(255, 253, 147)'};
 
     const sectionTable = {
         'about': 
@@ -131,7 +132,7 @@ const SectionDisplay = () => {
         'React':
             <ReactSection />,
         'HTML5':
-            <h1>HTML5</h1>,
+            <HTML5Section />,
         'CSS3':
             <h1>CSS3</h1>,
         'And More!':
