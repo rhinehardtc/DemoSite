@@ -56,11 +56,17 @@ function App() {
     p5.square((p5.windowWidth / 7) * 5.57, y + 600, p5.windowWidth / 15);
     p5.square((p5.windowWidth / 7) * 5.57, y + 750, p5.windowWidth / 15);
   };
+
+  const windowResized = (p5) => {
+    p5.resizeCanvas(p5.windowWidth, p5.windowHeight / 2);
+
+    p5.redraw();
+}
  
   return (
     <div className="main_div">
       <div className="p5_shapes_div">
-        <Sketch setup={shapesSetup} draw={shapesDraw} />
+        <Sketch setup={shapesSetup} draw={shapesDraw} windowResized={windowResized} />
       </div>
       <header className="welcome_header">
           <p>Welcome!</p>
