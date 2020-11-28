@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Sketch from "react-p5";
 import HTML5Section from './HTML5Section';
 import ReactSection from './ReactSection';
+import RoRSection from './RoRSection'
 import SocialLinks from './SocialLinks';
 
 const SectionDisplay = () => {
@@ -124,9 +125,7 @@ const SectionDisplay = () => {
                 </div>
             </>,
         'Ruby on Rails':
-            <>
-                <h2>Ruby on Rails</h2>
-            </>,
+            <RoRSection /> ,
         'JavaScript':
             <h2>JavaScrump</h2>,
         'React':
