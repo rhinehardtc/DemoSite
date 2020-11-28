@@ -4,7 +4,7 @@ import Sketch from "react-p5";
 const AndMoreSection = () => {
 
     const pStyle = {'font-size': '6vmin'};
-    const divStyle = {width: '50%'}
+    const divStyle = {width: 'fit content'}
 
     return(
         <>
