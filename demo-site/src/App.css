@@ -291,6 +291,46 @@
   z-index: 3;
 }
 
+.more_section {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 60vh;
+
+  text-align: center;
+  align-content: center;
+  align-items: center;
+
+  overflow-y: scroll;
+  border-top: 0.5em solid red;
+  border-bottom: 0.5em solid red;
+  border-radius: 3%;
+}
+
+ul {
+  list-style: square;
+  columns: 1;
+  text-align: center;
+  list-style-position: outside;
+  font-size: 5vmin;
+
+  animation:colorfade 5s;
+  -moz-animation:colorfade 5s infinite; /* Firefox */
+  -webkit-animation:colorfade 5s infinite; /* Safari and Chrome */
+}
+
+@-moz-keyframes colorfade /* Firefox */ {
+  0% {color:rgb(137, 134, 193);}
+  50% {color:red;}
+  100% {color:rgb(137, 134, 193);}
+}
+
+@keyframes colorfade /* Safari and Chrome */ {
+  0% {color:rgb(137, 134, 193);}
+  50% {color:red;}
+  100% {color:rgb(137, 134, 193);}
+}
+
 .link_logos {
   display: flex;
   flex-flow: row;

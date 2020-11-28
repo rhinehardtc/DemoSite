@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Sketch from "react-p5";
+import AndMoreSection from './AndMoreSection';
 import HTML5Section from './HTML5Section';
 import ReactSection from './ReactSection';
 import RoRSection from './RoRSection'
@@ -135,7 +136,7 @@ const SectionDisplay = () => {
         'CSS3':
             <h1>CSS3</h1>,
         'And More!':
-            <h3>Wait, there's more?</h3>,
+            <AndMoreSection /> ,
         'Social Links':
             <SocialLinks />
     }
