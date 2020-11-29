@@ -21,8 +21,8 @@ const JSSection = () => {
         p5.noStroke();
         p5.frameRate(30);
 
-        xpos = p5.width / 1.5;
-        ypos = p5.height / 5;
+        xpos = p5.width / 2;
+        ypos = p5.height / 2;
     }
       
     function draw(p5) {
@@ -54,6 +54,9 @@ const JSSection = () => {
 
     const windowResized = (p5) => {
         p5.resizeCanvas(p5.windowWidth * 0.6, p5.windowHeight * 0.40);
+
+        xpos = p5.width / 2;
+        ypos = p5.height / 2;
     
         p5.redraw();
     };
