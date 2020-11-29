@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Sketch from "react-p5";
 import AndMoreSection from './AndMoreSection';
 import HTML5Section from './HTML5Section';
+import JSSection from './JSSection';
 import ReactSection from './ReactSection';
 import RoRSection from './RoRSection'
 import SocialLinks from './SocialLinks';
@@ -128,7 +129,7 @@ const SectionDisplay = () => {
         'Ruby on Rails':
             <RoRSection /> ,
         'JavaScript':
-            <h2>JavaScrump</h2>,
+            <JSSection />,
         'React':
             <ReactSection />,
         'HTML5':

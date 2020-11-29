@@ -61,7 +61,7 @@ function App() {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight / 2);
 
     p5.redraw();
-}
+  };
  
   return (
     <div className="main_div">
