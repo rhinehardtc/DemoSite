@@ -14,6 +14,27 @@ const CSS3Section = () => {
                 <h2>CSS3</h2>
             </div>
             <div className="outer_filter_div">
+                <div className="middle_filter_div">
+                    <div 
+                        className="inner_filter_div" 
+                        onClick={() => filter1Style === 'filter_1_off' ? setFilter1Style('filter_1_on') : setFilter1Style('filter_1_off')}
+                    >▾ Filter 1 ▾</div>
+                    <div className={filter1Style}></div>
+                </div>
+                <div className="middle_filter_div">
+                    <div 
+                        className="inner_filter_div" 
+                        onClick={() => filter2Style === 'filter_2_off' ? setFilter2Style('filter_2_on') : setFilter2Style('filter_2_off')}
+                    >▾ Filter 2 ▾</div>
+                    <div className={filter2Style}></div>
+                </div>
+                <div className="middle_filter_div">
+                    <div 
+                        className="inner_filter_div" 
+                        onClick={() => filter3Style === 'filter_3_off' ? setFilter3Style('filter_3_on') : setFilter3Style('filter_3_off')}
+                    >▾ Filter 3 ▾</div>
+                    <div className={filter3Style}></div>
+                </div>
                 <div className="css3_text">
                     <p>
                         Styling is the part of a project that I find most relaxing. I really enjoy the art of styling with CSS3 and have taken it upon myself
@@ -22,30 +43,10 @@ const CSS3Section = () => {
                     </p> 
                     <p>
                         You may have noticed some interesting uses of CSS at play in my site already, including the floating social links, overflow scrolls, and
-                        sliding drawers. I've even included some slide-out color filters below this text that can be clicked on to mask this area in different ways.
+                        sliding drawers. I've even included some slide-out color filters above this text that can be clicked on to mask this area in different ways.
                     </p>
                 </div>
-                <div className="middle_filter_div">
-                    <div className={filter1Style}></div>
-                    <div 
-                        className="inner_filter_div" 
-                        onClick={() => filter1Style === 'filter_1_off' ? setFilter1Style('filter_1_on') : setFilter1Style('filter_1_off')}
-                    >▴ Filter 1 ▴</div>
-                </div>
-                <div className="middle_filter_div">
-                    <div className={filter2Style}></div>
-                    <div 
-                        className="inner_filter_div" 
-                        onClick={() => filter2Style === 'filter_2_off' ? setFilter2Style('filter_2_on') : setFilter2Style('filter_2_off')}
-                    >▴ Filter 2 ▴</div>
-                </div>
-                <div className="middle_filter_div">
-                    <div className={filter3Style}></div>
-                    <div 
-                        className="inner_filter_div" 
-                        onClick={() => filter3Style === 'filter_3_off' ? setFilter3Style('filter_3_on') : setFilter3Style('filter_3_off')}
-                    >▴ Filter 3 ▴</div>
-                </div>
+                
             </div>
         </>
     )
