@@ -103,7 +103,8 @@
 }
 
 .intro_div h2 {
-  width: 100%
+  width: 100%;
+  font-size: 7vw;
 }
 
 .img_of_me {
@@ -140,7 +141,7 @@
   margin-bottom: 1em;
 
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 7vw;
 }
 
 .unslide_letters {
