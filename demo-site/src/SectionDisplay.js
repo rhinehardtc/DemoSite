@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Sketch from "react-p5";
 import AndMoreSection from './AndMoreSection';
+import CSS3Section from './CSS3Section';
 import HTML5Section from './HTML5Section';
 import JSSection from './JSSection';
 import ReactSection from './ReactSection';
@@ -135,7 +136,7 @@ const SectionDisplay = () => {
         'HTML5':
             <HTML5Section />,
         'CSS3':
-            <h1>CSS3</h1>,
+            <CSS3Section />,
         'And More!':
             <AndMoreSection /> ,
         'Social Links':
