@@ -308,7 +308,7 @@
   align-self: center;
 
   width: 50%;
-  height: 30vmin;
+  height: 15%;
 
   overflow-y: scroll;
   border-top: 0.5em solid red;
@@ -338,7 +338,7 @@
   position: relative;
 
   width: 25%;
-  height: 50vmin;
+  height: 100%;
 }
 
 .filter_1_off {
