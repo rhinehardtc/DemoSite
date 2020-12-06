@@ -105,20 +105,21 @@ const SectionDisplay = () => {
                 </div>
                 <div className="intro_text">
                     <p>
-                        My name is Cameron Rhinehardt. I'm a creative and passionate person who loves to take on new
+                        My name is Cameron Rhinehardt. I'm currently looking for work as a web developer and enjoy working
+                        with in both frontend and backend. I graduated from Florida Atlantic University with a degree in Fine
+                        Arts in 2016. I had done a few gallery showings of my work while working at Microsoft from about 
+                        2015 to 2020 and decided that I would like to join the worlds of art and tech, so I enrolled in and
+                        graduated from FlatIron bootcamp with a certification in software engineering. Now I find myself
+                        quickly falling in love with the world of programming!
+                    </p>
+                    <p>
+                        I'm a creative and passionate person who loves to take on new
                         challenges and opportunities to learn. My hobbies include playing guitar, creating 
                         <a href="https://youtu.be/JnKXg-ciL78" rel="noreferrer" title="Vapor93 on YouTube" target="_blank" style={linkStyle} >synthwave music</a>,
                         animation, painting,
                         <a href="https://photos.app.goo.gl/THZHY2451R8AL8148" rel="noreferrer" title="Photos I Have Taken" target="_blank" style={linkStyle}>photography</a>,
                         <a href="https://photos.app.goo.gl/YUG2TTpmW5SqcnUa6" rel="noreferrer" title="R E T R O  A E S T H E T I C  P H O T O S" target="_blank" style={linkStyle} >digital photo editing</a>,
                         cooking, and the emerging world of VR! 
-                    </p>
-                    <p>
-                        I graduated from Florida Atlantic University with a degree in Fine Arts in 2016. I had done 
-                        a few gallery showings of my work while working at Microsoft from about 2015 to 2020 and 
-                        decided that I would like to join the worlds of art and tech, so I enrolled in and graduated
-                        from FlatIron bootcamp with a certification in software engineering. Now I find myself quickly 
-                        falling in love with the world of programming!
                     </p>
                     <p>
                         I also studied Japanese in highschool and college for six years and continue to enjoy practicing 
