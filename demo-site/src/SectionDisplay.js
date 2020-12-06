@@ -116,7 +116,7 @@ const SectionDisplay = () => {
                         I'm a creative and passionate person who loves to take on new
                         challenges and opportunities to learn. My hobbies include playing guitar, creating 
                         <a href="https://youtu.be/JnKXg-ciL78" rel="noreferrer" title="Vapor93 on YouTube" target="_blank" style={linkStyle} >synthwave music</a>,
-                        animation, painting,
+                        playing frisbee, hiking, animation, painting,
                         <a href="https://photos.app.goo.gl/THZHY2451R8AL8148" rel="noreferrer" title="Photos I Have Taken" target="_blank" style={linkStyle}>photography</a>,
                         <a href="https://photos.app.goo.gl/YUG2TTpmW5SqcnUa6" rel="noreferrer" title="R E T R O  A E S T H E T I C  P H O T O S" target="_blank" style={linkStyle} >digital photo editing</a>,
                         cooking, and the emerging world of VR! 
