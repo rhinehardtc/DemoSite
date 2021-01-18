@@ -7,6 +7,7 @@ const CSS3Section = () => {
     const [filter2Style, setFilter2Style] = useState('filter_2_off');
     const [filter3Style, setFilter3Style] = useState('filter_3_off');
 
+    const linkStyle = {color: 'red', marginLeft: '1%', textDecoration: 'none'};
 
     return(
         <>
@@ -39,7 +40,9 @@ const CSS3Section = () => {
                     <p>
                         Styling is the part of a project that I find most relaxing. I really enjoy the art of styling with CSS3 and have taken it upon myself
                         to do the styling for every project I've worked on so far, whether solo or with a partner. I consider multiple browsers and mobile layout
-                        as well and do extensive testing throughout my build process to make sure that resizing works and layout remains coherent.
+                        as well and do extensive testing throughout my build process to make sure that resizing works and layout remains coherent. I'm also making
+                        a set of live CSS styling tools that can be used to experiment with different properties. Check out the one I made for Flexbox, called
+                        <a style={linkStyle} href="https://rhinehardtc.github.io/flex-changer" rel="noreferrer" title="Experiment with flex!" target="_blank">Flex-Changer</a>.
                     </p> 
                     <p>
                         You may have noticed some interesting uses of CSS at play in my site already, including the floating social links, overflow scrolls, and
