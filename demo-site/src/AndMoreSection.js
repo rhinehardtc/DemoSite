@@ -15,6 +15,8 @@ const AndMoreSection = () => {
                 <p style={pStyle}>Listed below are some other technologies I've worked with.</p>
                 <div style={divStyle}>
                     <ul>
+                        <li>Redux</li>
+                        <li>React Hooks</li>
                         <li>JSON</li>
                         <li>Web Audio API</li>
                         <li>GamePad API</li>
