@@ -24,6 +24,7 @@ const AndMoreSection = () => {
                         <li>Lodash</li>
                         <li>Git</li>
                         <li>Bit</li>
+                        <li>Sessions</li>
                     </ul>
                 </div>
             </div>
