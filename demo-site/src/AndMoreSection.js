@@ -17,6 +17,7 @@ const AndMoreSection = () => {
                     <ul>
                         <li>Redux</li>
                         <li>React Hooks</li>
+                        <li>Python</li>
                         <li>JSON</li>
                         <li>Web Audio API</li>
                         <li>GamePad API</li>
