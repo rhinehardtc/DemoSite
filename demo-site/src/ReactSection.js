@@ -50,7 +50,7 @@ const ReactSection = () => {
                     <p>
                         I'm doing a lot lately with React! Out of all the programming languages, libraries, and tools that I've tried,
                         I think React might just be my favorite so far. I LOVE how easy it makes it to design websites and web-apps and
-                        now that I'm getting the hang of hooks, I like it even more because state management has become a breeze! 
+                        now with hooks, I like it even more because state management has become a breeze! 
                     </p> 
                     <p>
                         This site was also made with React, and if you click the drawer to the left of this text you can watch some demo
